@@ -3,7 +3,7 @@ import { ArrowRight, Cpu, Shield, MapPin, BarChart3, CheckCircle, Zap } from 'lu
 import Navbar from '../components/layout/Navbar'
 
 const FEATURES = [
-  { icon: Cpu,        title: 'YOLOv11 AI Detection',   desc: 'Real-time waste classification with environmental impact data from a comprehensive knowledge base.' },
+  { icon: Cpu,        title: 'Plastic Waste Classification',   desc: 'Real-time waste classification with environmental impact data from a comprehensive knowledge base.' },
   { icon: MapPin,     title: 'GPS & EXIF Routing',       desc: 'Extracts GPS coordinates from image metadata to auto-assign complaints to responsible agencies.' },
   { icon: Shield,     title: 'SSIM Verification',        desc: 'Before/after image comparison using Structural Similarity Index to verify cleanup authenticity.' },
   { icon: BarChart3,  title: 'Live Dashboards',          desc: 'Role-specific dashboards for citizens, administrators and cleaning agencies updated in real time.' },
@@ -12,8 +12,8 @@ const FEATURES = [
 ]
 
 const STEPS = [
-  { num:'01', title:'Report Waste',     desc:'Upload a photo — GPS coordinates and pincode are extracted automatically from EXIF metadata.' },
-  { num:'02', title:'AI Classification', desc:'YOLOv11 identifies waste type, degradability, and environmental impact before you submit.' },
+  { num:'01', title:'Report Waste',     desc:'Upload waste photo — GPS coordinates and pincode are extracted automatically from EXIF metadata.' },
+  { num:'02', title:'Classification', desc:'LLM detects and classify all 7 different types of plastic waste.' },
   { num:'03', title:'Auto Routing',     desc:'The system finds the responsible agency from agencyDB and assigns your complaint instantly.' },
   { num:'04', title:'SSIM Verified',    desc:'Agency staff upload an after-photo. SSIM comparison confirms cleanup authenticity automatically.' },
 ]
@@ -43,17 +43,16 @@ export default function Landing() {
                         fontFamily:'Helvetica', fontSize:'12px', fontWeight:700,
                         color:'var(--acid)', letterSpacing:'1px', textTransform:'uppercase' }}>
             <span className="w-2 h-2 rounded-full animate-pulse-dot" style={{background:'var(--acid)'}} />
-            AI-Powered Waste Management System
+             Smart Plastic Waste Management System
           </div>
 
           <h1 className="heading mb-6" style={{ fontSize:'clamp(2.8rem,7vw,7rem)', lineHeight:1.05, color:'var(--text-1)' }}>
             Report Waste.<br />
-            <span style={{ color:'var(--acid)' }}>Save the Planet.</span>
+            <span style={{ color:'var(--acid)' }}>Save our Mother Earth.</span>
           </h1>
 
           <p style={{ fontSize:'1.1rem', color:'var(--text-2)', maxWidth:'520px', margin:'0 auto 40px', lineHeight:1.7 }}>
-            Upload a photo of illegal dumping. Our AI classifies the waste, routes it to the right agency, 
-            and verifies cleanup — all automatically.
+            One Photo → Click Detect & Classify → Sends complaint.
           </p>
 
           <div className="flex items-center justify-center gap-4 flex-wrap">
@@ -140,7 +139,7 @@ export default function Landing() {
               Start Reporting Today
             </h2>
             <p style={{color:'var(--text-2)',marginBottom:'32px',fontSize:'15px'}}>
-              Join the platform that connects citizens with municipal agencies through AI-verified waste complaints.
+              Join the platform that connects citizens with municipal agencies through waste complaints.
             </p>
             <Link to="/register" className="btn btn-primary" style={{fontSize:'15px',padding:'14px 36px'}}>
               Create Free Account <ArrowRight size={16}/>
@@ -152,7 +151,7 @@ export default function Landing() {
       {/* Footer */}
       <footer style={{ borderTop:'1px solid var(--border)', padding:'24px 0', textAlign:'center' }}>
         <p style={{ color:'var(--text-3)', fontSize:'12px', fontFamily:'Syne,sans-serif' }}>
-          © 2024 WasteGuard — AI Waste Complaint Management System
+          © 2024 SwatchX — Plastic Waste Detection, Classification and Reporting System
         </p>
       </footer>
     </div>
