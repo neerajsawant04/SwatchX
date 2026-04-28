@@ -66,7 +66,7 @@ export default function Landing() {
 
           {/* Stats row */}
           <div className="flex items-center justify-center gap-12 mt-16 flex-wrap">
-            {[['4 Databases','Isolated & Secure'],['YOLOv11','14 Waste Classes'],['SSIM Verified','Before/After AI Check'],['3 Roles','User · Admin · Staff']].map(([num,lab]) => (
+            {[['4 Databases','Isolated & Secure'],['LLM','7 Plastic Waste Classification'],['SSIM Verified','Before/After AI Check'],['3 Roles','User · Admin · Staff']].map(([num,lab]) => (
               <div key={num} className="text-center">
                 <div className="heading text-xl" style={{color:'var(--acid)'}}>{num}</div>
                 <div style={{color:'var(--text-3)',fontSize:'12px',marginTop:'2px',fontFamily:'Syne,sans-serif'}}>{lab}</div>
