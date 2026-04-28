@@ -22,7 +22,13 @@ def create_app():
     app.config["JWT_ACCESS_TOKEN_EXPIRES"]  = timedelta(hours=24)
 
     CORS(app, resources={r"/api/*": {
-        "origins": ["http://localhost:5173", "http://localhost:3000"],
+        "origins": [
+        "http://localhost:5173", 
+        "http://localhost:3000",
+        "https://swatchx-d4iihrdxa-theneerajsawant-9101s-projects.vercel.app/",  # Add your frontend URL
+        "https://swatch-x.vercel.app"  # Your actual frontend domain
+    ],
+
         "methods": ["GET","POST","PATCH","DELETE","OPTIONS"],
         "allow_headers": ["Content-Type","Authorization"]
     }}, supports_credentials=True)
